@@ -17,7 +17,7 @@ namespace WorkerService.Models
         public string Latitude { get; set; }
         [JsonPropertyName("geo_long")]
         public string Longitude { get; set; }
-
+ 
         public string Additional { get; set; } = "MS👔🧥🥼";
     }
 
