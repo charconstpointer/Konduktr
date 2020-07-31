@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace WorkerService.Models
 {
 
+    [BsonIgnoreExtraElements]
     public class Row
     {
         [JsonPropertyName("typ")]
@@ -14,6 +17,8 @@ namespace WorkerService.Models
         public string Latitude { get; set; }
         [JsonPropertyName("geo_long")]
         public string Longitude { get; set; }
+
+        public string Additional { get; set; } = "MS👔🧥🥼";
     }
 
     public class Data
